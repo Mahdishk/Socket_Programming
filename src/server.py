@@ -34,7 +34,7 @@ def start():
         clinet_socket, client_addr = server.accept()
         thread = threading.Thread(target=handle_client, args=(clinet_socket, client_addr))
         thread.start()
-        print(f"[ACTIVE CONNECTIONS] {threading.activeCount() - 1}")
+        print(f"[ACTIVE CONNECTIONS] {threading.active_count() - 1}")
 
 
 if __name__ == "__main__":
